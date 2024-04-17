@@ -121,8 +121,13 @@ const Login = () => {
               <button
                 className="bg-[#42b72a] text-xl hover:bg-[#389e24] text-white  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
+                disabled={loading}
               >
-                Sign Up
+                {loading ? (
+                  <span className="loading loading-spinner"></span>
+                ) : (
+                  "Sign Up"
+                )}
               </button>
             </div>
           </form>
