@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useGetConversations = () => {
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(false);
   const [conversations, setConversations] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const useGetConversations = () => {
       } catch (error) {
         toast.error(error.message);
       } finally {
-        setLoading(true);
+        setLoading(false);
       }
     };
 
