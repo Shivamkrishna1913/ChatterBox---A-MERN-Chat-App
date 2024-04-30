@@ -10,7 +10,8 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 // const app = express();
 import { app, server } from "./socket/socket.js";
 
-const PORT = process.env.PORT;
+const PORT = 5000;
+// const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 dotenv.config();
